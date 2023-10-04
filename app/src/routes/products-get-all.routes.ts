@@ -4,9 +4,9 @@ import connection from "../database/connection";
 
 
 // Criando uma instancia de Router dentro da constante routes
-const productsRouter = Router();
+const productsRouterGetAll = Router();
 
-productsRouter.get('/', async (request, response) => {
+productsRouterGetAll.get('/', async (request, response) => {
     const products = await connection('products').select('*')
 
     // Retornando um json como resposta para requisição get na raiz
@@ -14,4 +14,4 @@ productsRouter.get('/', async (request, response) => {
 });
 
 
-export default productsRouter;
+export default productsRouterGetAll;
