@@ -6,7 +6,8 @@ Esta é uma API simples para interagir com produtos, permitindo ações como reg
 
 Certifique-se de ter as seguintes dependências instaladas antes de prosseguir:
 
-- Node.js v9.5.1
+- Node.js v18.16.1
+- npm v9.5.1
 - TypeScript v5.2.2
 - Express.js v4.18.2
 - Knex.js v2.5.1
