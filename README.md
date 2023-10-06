@@ -55,10 +55,10 @@ Endpoint: `POST /products`
 
 Para inserir um novo produto, envie um JSON no corpo da solicitação com os seguintes campos:
 
-- `nome` (obrigatório, único)
-- `descricao` (opcional, máximo de 500 caracteres)
-- `preco` (obrigatório, valor positivo)
-- `quantidade` (obrigatório, valor inteiro positivo)
+- `name` (obrigatório, único)
+- `description` (opcional, máximo de 500 caracteres)
+- `price` (obrigatório, valor positivo)
+- `stock` (obrigatório, valor inteiro positivo)
 
 ### Atualizar um Produto
 
