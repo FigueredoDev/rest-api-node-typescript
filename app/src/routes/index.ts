@@ -1,5 +1,4 @@
 import { Request, Response, Router } from "express";
-import productsRouterGetId from "./products-get-id.routes";
 import productsRouterPost from "./products-post.routes";
 import productsRouterPut from "./products-put.routes";
 import productsRouterDelete from "./products-delete.routes";
@@ -13,7 +12,7 @@ const asyncHandle = (fn: any) => (req: Request, res: Response) => {
 };
 
 routes.get("/products", cors(), asyncHandle(productController.index));
-routes.use("/products/search", cors(), productsRouterGetId);
+routes.get("/products/:id", cors(), asyncHandle(productController.show));
 routes.use("/products", cors(), productsRouterPost);
 routes.use("/products", cors(), productsRouterPut);
 routes.use("/products", cors(), productsRouterDelete);
