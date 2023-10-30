@@ -127,6 +127,14 @@ class ProductController {
 
     return response.json(product);
   }
+
+  async delete(request: Request, response: Response) {
+    const { id } = request.params;
+
+    await connection("products").where("id", id).first().delete();
+
+    return response.json({ message: "Produto deletado!" });
+  }
 }
 
 // Singleton Pattern

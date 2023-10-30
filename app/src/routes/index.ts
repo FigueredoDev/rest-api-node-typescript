@@ -1,5 +1,4 @@
 import { Request, Response, Router } from "express";
-import productsRouterDelete from "./products-delete.routes";
 import cors from "cors";
 import productController from "../controllers/productController";
 
@@ -13,6 +12,6 @@ routes.get("/products", cors(), asyncHandle(productController.index));
 routes.get("/products/:id", cors(), asyncHandle(productController.show));
 routes.post("/products", cors(), asyncHandle(productController.create));
 routes.put("/products/:id", cors(), asyncHandle(productController.update));
-routes.use("/products", cors(), productsRouterDelete);
+routes.delete("/products/:id", cors(), asyncHandle(productController.delete));
 
 export default routes;
